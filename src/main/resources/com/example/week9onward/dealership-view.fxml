@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane prefHeight="800.0" prefWidth="1000.0" stylesheets="@newStyles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.week9onward.DealershipController">
+    <children>
+        <VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="1000.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label id="header" fx:id="dealershipLabel" text="Label" />
+                <TableView prefHeight="342.0" prefWidth="809.0">
+                    <columns>
+                        <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="yearColumn" prefWidth="75.0" text="Year" />
+                        <TableColumn fx:id="makeColumn" prefWidth="75.0" text="Make" />
+                        <TableColumn fx:id="modelColumn" prefWidth="75.0" text="Model" />
+                        <TableColumn fx:id="typeColumn" prefWidth="75.0" text="Type" />
+                        <TableColumn fx:id="priceColumn" prefWidth="75.0" text="Price" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+                <HBox alignment="TOP_CENTER" spacing="20.0">
+                    <children>
+                        <BarChart fx:id="chart" prefHeight="277.0" prefWidth="368.0">
+                            <xAxis>
+                                <CategoryAxis side="BOTTOM" />
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis side="LEFT" />
+                            </yAxis>
+                        </BarChart>
+                        <VBox spacing="20.0">
+                            <children>
+                                <ComboBox fx:id="makeComboBox" prefWidth="150.0" promptText="Select Make" />
+                                <TextField fx:id="searchTextField" promptText="Enter Search" />
+                            </children>
+                        </VBox>
+                        <VBox spacing="30.0">
+                            <children>
+                                <Label fx:id="avgPriceLabel" text="Avg Price:" />
+                                <Label fx:id="totalValueLabel" text="Total Value" />
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>

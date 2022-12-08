@@ -1,0 +1,10 @@
+.root{
+    -fx-background-color: steelblue;
+    -fx-font: bold italic 20 pt "Arial"
+}
+
+#header
+{
+    -fx-text-fill: white;
+    -fx-font: bold 50pt "Forte";
+}
